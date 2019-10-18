@@ -1,0 +1,91 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}5 Star Property Maintenance - Past Projects{% endblock title %}
+{% block content %}
+    <div class="page-wrapper-colour">
+    <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"><strong style="color: white">Past Projects</strong></h1>
+      <p class="lead text-white"><strong>We here at 5 star property maintenance have been working in the industry for over 15 years so we have a fair few past projects.</strong></p>
+  </div>
+</div>
+    <br>
+    <br>
+    <div class="container">
+    <div class="row no-gutters">
+        {% for item in job %}
+            <div class="col-lg">
+            <div class="card">
+                <div class="card-header">
+            <h3 class="text-center">{{ item.project_name }}</h3>
+                {% if item.review_for_Project is None %}
+                {% else %}
+                    <h3 class="float-left">Rating : </h3>
+                    <div class="float-right">
+                        {% if item.review_for_Project.rating == '5' %}
+                        <h3 class="text-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h3>
+                        {% endif %}
+                        {% if item.review_for_Project.rating == '4' %}
+                        <h3 class="text-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h3>
+                        {% endif %}
+                        {% if item.review_for_Project.rating == '3' %}
+                        <h3 class="text-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h3>
+                        {% endif %}
+                        {% if item.review_for_Project.rating == '2' %}
+                            <h3 class="text-center"><i class="fas fa-star"></i><i class="fas fa-star"></i></h3>
+                        {% endif %}
+                        {% if item.review_for_Project.rating == '1' %}
+                            <h3 class="text-center"><i class="fas fa-star"></i></h3>
+                        {% endif %}
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                        <h6>{{ item.review_for_Project.customer_name }}</h6>
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col">
+                        <p>{{ item.review_for_Project.review }}</p>
+                    </div>
+                </div>
+                {% endif %}
+                </div>
+            </div>
+            </div>
+            <div class="w-100"></div>
+            {% if item.is_there_before_photos is True %}
+
+            <div class="col-lg">
+                <div class="card mb-3">
+                    <div class="card-header text-center"><h3>Before</h3></div>
+                    <img class="card-img-top" style="height: 300px" src="{{ item.before_photo.url }}">
+                    <div class="card-body text-center">
+                        <p>{{ item.before_description }}</p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+        <div class="col-lg">
+            <div class="card mb-3">
+                {% if item.is_there_before_photos is True %}
+                <div class="card-header text-center"><h3>After</h3></div>
+                {% endif %}
+                <img class="card-img-top" style="height: 300px" src="{{ item.after_photo.url }}">
+                <div class="card-body text-center">
+                    <p>{{ item.after_description }}</p>
+                    <p>Job Completed on {{ item.date }}</p>
+                </div>
+            </div>
+        </div>
+            <div class="w-100"></div>
+            <br>
+            <br>
+            <br>
+            <br>
+        {% endfor %}
+    </div>
+    </div>
+    </div>
+{% endblock content %}

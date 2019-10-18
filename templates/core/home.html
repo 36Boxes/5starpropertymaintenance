@@ -1,0 +1,183 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}5 Star Property Maintenance - Home{% endblock title %}
+{% block content %}
+<div id="carousel-example" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example" data-slide-to="1"></li>
+    <li data-target="#carousel-example" data-slide-to="2"></li>
+    <li data-target="#carousel-example" data-slide-to="3"></li>
+    <li data-target="#carousel-example" data-slide-to="4"></li>
+    <li data-target="#carousel-example" data-slide-to="5"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="item active">
+      <a><img class="carousel-image" src="{% static "core/image-001.jpg" %}" /></a>
+      <div class="carousel-caption">
+        <h3>Your First and only choice for any problem you have with your property.</h3>
+        <a href="{% url 'past-projects' %}" style="background-color: #f9b101" class="btn btn-warning">Checkout our past projects!</a>
+      </div>
+    </div>
+    <div class="item">
+      <a><img class="carousel-image" src="{% static "core/image-002.jpg" %}" /></a>
+      <div class="carousel-caption">
+        <h3>Your First and only choice for any problem you have with your property.</h3>
+        <a href="{% url 'past-projects' %}" style="background-color: #f9b101" class="btn btn-warning">Checkout our past projects!</a>
+      </div>
+    </div>
+    <div class="item">
+      <a><img class="carousel-image" src="{% static "core/image-003.jpg" %}" /></a>
+      <div class="carousel-caption">
+        <h3>Your First and only choice for any problem you have with your property.</h3>
+        <a href="{% url 'past-projects' %}" style="background-color: #f9b101" class="btn btn-warning">Checkout our past projects!</a>
+      </div>
+    </div>
+      <div class="item">
+      <a><img class="carousel-image" src="{% static "core/image-004.jpg" %}" /></a>
+      <div class="carousel-caption">
+        <h3>Your First and only choice for any problem you have with your property.</h3>
+        <a href="{% url 'past-projects' %}" style="background-color: #f9b101" class="btn btn-warning">Checkout our past projects!</a>
+      </div>
+    </div>
+          <div class="item">
+      <a><img class="carousel-image" src="{% static "core/image-005.jpg" %}" /></a>
+      <div class="carousel-caption">
+        <h3>Your First and only choice for any problem you have with your property.</h3>
+        <a href="{% url 'past-projects' %}" style="background-color: #f9b101" class="btn btn-warning">Checkout our past projects!</a>
+      </div>
+    </div>
+          <div class="item">
+      <a><img class="carousel-image" src="{% static "core/image-006.jpg" %}" /></a>
+      <div class="carousel-caption">
+        <h3>Your First and only choice for any problem you have with your property.</h3>
+        <a href="{% url 'past-projects' %}" style="background-color: #f9b101" class="btn btn-warning">Checkout our past projects!</a>
+      </div>
+    </div>
+  </div>
+
+  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+        <div class="white">
+    <br>
+
+    <div class="container">
+<div class="row">
+    <div class="col-lg">
+        <div class="card mb-3">
+            <div class="card-header text-center">
+                <h3>Any Task We Can Deliver!</h3>
+                <h3><i class="fas fa-hammer"></i></h3>
+            </div>
+            <div class="card-body text-center">
+                <p>
+                Whether its roofing, facias & soffits, flat roofing, rendering, pebble dashing, plastering, painting, blockwork, patios, extensions, driveways or fencing we have you covered! Our team here is skilled enough to tackle any task you may find around your home!
+                </p>
+
+                <br>
+            <a style="background-color: #f9b101" href="{% url 'enquiry' %}" class="btn btn-warning text-white">Make an enquiry</a>
+                <br>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg">
+                <div class="card mb-3">
+            <div class="card-header text-center">
+                <h3>Phone Hours</h3>
+                <h3><i class="fas fa-phone"></i></h3>
+            </div>
+            <div class="card-body text-center">
+                <h4>Phone us on</h4>
+                <h2><a href="tel:07472703733">07472703733</a></h2>
+                <br>
+                <p>
+                Phone us anytime between x and y and we'll be sure to take your enquiry!
+                </p>
+
+                <br>
+            <a style="background-color: #f9b101" class="btn text-white" href="tel:07472703733">Call Now</a>
+                <br>
+
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card mb-3">
+            <div class="card-header text-center">
+                <h3>Fast Turnout Time</h3>
+                <h3><i class="fas fa-bolt"></i></h3>
+            </div>
+            <div class="card-body text-center">
+                <br>
+                <p>
+                Nobody likes a wait! That's why we pride ourselves in completing jobs not only quickly but to an extremely high standard leaving all of our clients extremely happy just see for yourself!
+                </p>
+
+                <br>
+            <a style="background-color: #f9b101" class="btn btn-warning text-white" href="{% url 'reviews' %}">Check out our reviews!</a>
+                <br>
+
+            </div>
+        </div>
+        </div>
+
+</div>
+    </div>
+        <br>
+        <br>
+        <br>
+        </div>
+<div class="greyscale-it">
+    <br>
+    <br>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <div class="card border-0 mb-3">
+                <img class="card-img-top" src="{% static 'core/bigstock-Plastering-The-Wall-Hands-Pla-320315068.jpg' %}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Interior Services</h5>
+                    <p >We Provide a wide range of interior services at an affordable price to suit all your needs!</p>
+                    <br>
+                    <a style="background-color: #f9b101" class="btn text-white" href="{% url 'about' %}">Find out more!</a>
+                </div>
+            </div>
+        </div>
+                <div class="col-lg">
+            <div class="card border-0 mb-3">
+                <img class="card-img-top" src="{% static 'core/bigstock-Laying-Gray-Concrete-Paving-Sl-259289362.jpg' %}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Exterior Services</h5>
+                    <p>We also provide excellent quality exterior services whether it is blockwork you are after or maybe an extension, call the number above and find out more! </p>
+                    <br>
+                    <a style="background-color: #f9b101" class="btn text-white" href="tel:07472703733">Call Now!</a>
+                </div>
+            </div>
+        </div>
+                <div class="col-lg">
+            <div class="card border-0 mb-3">
+                <img class="card-img-top" src="{% static 'core/bigstock-Man-laying-grass-turf-rolls-fo-312587296.jpg' %}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Landscaping Services</h5>
+                    <p>Want to reclaim space in your garden? We provide a quick high quality and yet affordable turfing service whether its uprooting trees or leveling out your garden we can complete the task!</p>
+                    <br>
+                    <a style="background-color: #f9b101" class="btn text-white" href="{% url 'enquiry' %}">Make an enquiry!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+<br>
+<br>
+<br>
+</div>
+    </div>
+{% endblock content %}

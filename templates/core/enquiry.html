@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Make an enquiry - 5 Star Property Maintenance{% endblock title %}
+{% block content %}
+    <div class="white">
+    <br>
+        <div class="container">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h3>Make an Enquiry</h3>
+                </div>
+                <div class="card-body text-center">
+                    <form method="post">
+                        {% csrf_token %}
+                        <h4>First Name</h4>
+                        {{ form.first_name }}
+                        <br>
+                        <h4>Last Name</h4>
+                        {{ form.last_name }}
+                        <br>
+                        <h4>Phone Number</h4>
+                        {{ form.phone }}
+                        <h4>Issue Category</h4>
+                        {{ form.issue_category }}
+                        <h4>Brief Description of issue</h4>
+                        {{ form.issue }}
+                        <br>
+                        <input style="background-color: #f9b101" class='btn btn-lg ml-2' type="submit"/>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    <br>
+    <br>
+    <br>
+    </div>
+{% endblock content %}

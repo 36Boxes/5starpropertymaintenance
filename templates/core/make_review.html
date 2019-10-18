@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Submit a review - 5 Star Property Maintenance{% endblock title %}
+{% block  content %}
+    <div class="page-wrapper-colour">
+<br>
+        <div class="container">
+    <div class="card">
+        <div class="card-header text-center">
+            <h2>Submit a review</h2>
+        </div>
+        <br>
+        <div class="card-body">
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                {{  form.customer_name  }}
+                </div>
+                <br>
+                <br>
+                <h5 class="text-center">Rating</h5>
+                <br>
+                <div class="text-center">{{ form.rating }}</div>
+                <br>
+                <br>
+                <br>
+                <div>{{ form.review }}</div>
+                <br>
+                <br>
+                <br>
+                <div class="text-center">{{ form.project }}</div>
+                <br>
+                <br>
+                <br>
+                <div class="text-center">
+                <input class='btn btn-success ml-2' type="submit"/>
+                </div>
+
+            </form>
+        </div>
+    </div>
+            <br>
+            <br>
+            <br>
+            <br>
+    </div>
+    </div>
+
+
+{% endblock content %}

@@ -1,0 +1,79 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}What we can do - 5 Star Property Maintenance{% endblock title %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"><strong style="color: white"> What we can do</strong></h1>
+      <p class="lead text-white"><strong>We here at 5 star property maintenance have been working in the industry for over 15 years so we are more than experienced in any tasks you give us.</strong></p>
+  </div>
+</div>
+    <div class="white">
+    <br>
+    <br>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <div class="card border-0 mb-3">
+                <img class="card-img-top" src="{% static 'core/bigstock-Plastering-The-Wall-Hands-Pla-320315068.jpg' %}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Interior Services</h5>
+                    <p >We Provide a wide range of interior services at an affordable price to suit all your needs!</p>
+                    <ul>
+                        <li>Plastering</li>
+                        <li>Flooring</li>
+                        <li>Bathrooms</li>
+                        <li>Painting & Decorating</li>
+                        <li>Carpentry</li>
+                    </ul>
+                    <br>
+                    <a style="background-color: #f9b101" class="btn text-white" href="{% url 'enquiry' %}">Make an enquiry!</a>
+                </div>
+            </div>
+        </div>
+                <div class="col-lg">
+            <div class="card border-0 mb-3">
+                <img class="card-img-top" src="{% static 'core/bigstock-Laying-Gray-Concrete-Paving-Sl-259289362.jpg' %}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Exterior Services</h5>
+                    <p>We also provide excellent quality exterior services whether it is blockwork you are after or maybe an extension, call the number above and find out more! </p>
+                                        <ul>
+                        <li>Rendering</li>
+                        <li>Facias & Soffits</li>
+                        <li>Windows</li>
+                        <li>Roofing</li>
+                        <li>Driveways</li>
+                        <li>Extensions</li>
+                        <li>Patios</li>
+                        <li>Gutering</li>
+                        <li>Drainage</li>
+                    </ul>
+                    <br>
+                    <a style="background-color: #f9b101" class="btn text-white" href="tel:07472703733">Call Now!</a>
+                </div>
+            </div>
+        </div>
+                <div class="col-lg">
+            <div class="card border-0 mb-3">
+                <img class="card-img-top" src="{% static 'core/bigstock-Man-laying-grass-turf-rolls-fo-312587296.jpg' %}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Landscaping Services</h5>
+                    <p>Want to reclaim space in your garden? We provide a quick high quality and yet affordable turfing service whether its uprooting trees or leveling out your garden we can complete the task!</p>
+                                        <ul>
+                        <li>Fencing</li>
+                        <li>Turfing</li>
+                        <li>Block Paving</li>
+                    </ul>
+                    <br>
+                    <a style="background-color: #f9b101" class="btn text-white" href="{% url 'enquiry' %}">Make an enquiry!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+<br>
+<br>
+<br>
+</div>
+
+{% endblock content %}

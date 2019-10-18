@@ -1,0 +1,68 @@
+{% extends "core/base.html" %}
+{% block title %}Reviews - 5 Star Property Maintenance{% endblock title %}
+{% block content %}
+    <div class="page-wrapper-colour">
+    <br>
+        <div class="card">
+            <div class="card-header text-center">
+                <h2>Reviews</h2>
+            </div>
+        </div>
+    <br>
+    <br>
+    <div class="container">
+        {% for review in reviews %}
+        <div class="row">
+            <div class="col-lg">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h2 class="text-center">{{ review.customer_name }}</h2>
+                        <div class="text-center"><h2>{{ review.project.project_name }}</h2></div>
+                                            {% if review.rating == '5' %}
+                        <h2 class="text-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h2>
+                        {% endif %}
+                        {% if review.rating == '4' %}
+                        <h2 class="text-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h2>
+                        {% endif %}
+                        {% if review.rating == '3' %}
+                        <h2 class="text-center"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h2>
+                        {% endif %}
+                        {% if review.rating == '2' %}
+                        <h2 class="text-center"><i class="fas fa-star"></i><i class="fas fa-star"></i></h2>
+                        {% endif %}
+                        {% if review.rating == '1' %}
+                        <h2 class="text-center"><i class="fas fa-star"></i></h2>
+                        {% endif %}
+                    </div>
+                    <div class="card-body text-center">
+                        <p>{{ review.review }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100"></div>
+        </div>
+            {% endfor %}
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-lg">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="text-center">Used Our Services and want to submit a review?</h4>
+                    <div class="card-body text-center">
+                        <p>Click the button below and submit a review for our services!</p>
+                        <a href="{% url 'submit-a-review' %}" style="background-color: #f9b101" class="btn btn-warning text-white text-center">Submit a review</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+        </div>
+
+    </div>
+
+{% endblock content %}
